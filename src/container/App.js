@@ -1,6 +1,8 @@
 import React from 'react';
 import uuid from 'uuid';
 import style from './App.css';
+import TodoList from '../components/TodoList'
+//import Title from './Title'
 
 class App extends React.Component {
     constructor(props){
@@ -34,7 +36,9 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className={style.TodoApp}>
-				Tutaj pojawią się komponenty naszej aplikacji.
+				<Title title='Todo List' />
+			
+				<TodoList data={this.state.data} remove={removeTodo} />
 			</div>
 		);
 	}
